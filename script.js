@@ -74,12 +74,14 @@ const csvString =
 
 for (let i = 0; i < csvString.length; i++) {
   if (csvString[i] === ",") {
-    // if comma, move to next cell
+    // if character is a comma, move to next cell
     currentCell++;
   } else if (csvString[i] === "\n") {
-    // if is \n move to next row
+    // if chracter is \n move to next row
     console.log(cell1, cell2, cell3, cell4);
     console.log("\n");
+
+    // Resetting cells
     currentCell = 1;
     cell1 = "";
     cell2 = "";
